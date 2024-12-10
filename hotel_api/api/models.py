@@ -15,10 +15,10 @@ class Room(models.Model):
 
 class Reservation(models.Model):
     user = models.ForeignKey(
-        User, on_delete=models.Cascade, related_name="reservations"
+        User, on_delete=models.CASCADE, related_name="reservations"
     )
     room = models.ForeignKey(
-        Room, on_delete=models.Cascade, related_name="reservations"
+        Room, on_delete=models.CASCADE, related_name="reservations"
     )
     start_date = models.DateField()
     end_date = models.DateField()
